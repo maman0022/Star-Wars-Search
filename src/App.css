@@ -1,4 +1,4 @@
-main{
+main {
   background-color: #808080;
   height: 80%;
   width: 80%;
@@ -7,6 +7,6 @@ main{
   overflow: auto;
 }
 
-section{
+section {
   overflow: auto;
 }

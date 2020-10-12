@@ -7,17 +7,13 @@ export default function SearchForm(props) {
   return (
     <SharedContext.Consumer>
       {
-        ({ possibleSubjects, setSearchQuery, setSearchSubject, setLoading, setPageNumber }) => {
+        ({ possibleSubjects }) => {
           let handleSubmit = async (e) => {
             e.preventDefault();
-            let query = e.target.query.value;
-            let searchString = query.trim() === '' ? '' : `?search=${query}`;
+            let query = e.target.query.value.trim();
+            query === '' ? query = null : void 0;
             let subject = e.target.subject.value;
-            setPageNumber(1);
-            setSearchSubject(subject);
-            setSearchQuery(searchString);
-            setLoading(true);
-            props.history.push('/loading');
+            props.history.push(`/search/${subject}/${query}/1`)
           }
           return (<section className='flex-row justify-center'>
             <form onSubmit={handleSubmit} className='flex-column justify-between'>
