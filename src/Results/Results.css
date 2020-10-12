@@ -1,0 +1,42 @@
+#results-section {
+  height: inherit;
+}
+
+#result-header {
+  margin: 0;
+  text-decoration: underline;
+}
+
+#result-list {
+  padding: 0;
+  margin-top: 0;
+}
+
+.result-list-item {
+  flex-basis: 33%;
+  list-style-type: none;
+  text-align: center;
+  max-height: max-content;
+  font-size: x-large;
+  margin: auto;
+}
+
+.result-list-item h5{
+  margin: 0.7rem;
+}
+
+#results-page-nav {
+  width: 100%;
+}
+
+#results-page-nav a {
+  flex-basis: 10%;
+  font-size: x-large;
+  text-decoration-line: none;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration-line: none;
+}
