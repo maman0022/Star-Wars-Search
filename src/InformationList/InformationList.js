@@ -17,6 +17,7 @@ export default function InformationList(props) {
               <dd>{props.result[key].includes('http') ? replaceUrl(props.result[key]) : props.result[key]}</dd>
             </React.Fragment>
           )
+          return void 0
       })}
     </dl>
   )

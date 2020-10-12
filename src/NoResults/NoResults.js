@@ -1,5 +1,4 @@
 import React from 'react';
-import SharedContext from '../SharedContext';
 
 export default function NoResults(props){
   return(
