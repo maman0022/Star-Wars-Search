@@ -5,6 +5,7 @@
 #result-header {
   margin: 0;
   text-decoration: underline;
+  text-transform: capitalize;
 }
 
 #result-list {
@@ -21,12 +22,12 @@
   margin: auto;
 }
 
-.result-list-item h5{
+.result-list-item h5 {
   margin: 0.7rem;
 }
 
 #results-page-nav {
-  width: 100%;
+  max-width: 300px;
 }
 
 #results-page-nav a {
