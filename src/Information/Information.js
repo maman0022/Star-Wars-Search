@@ -50,9 +50,9 @@ export default function Information(props) {
 
           return (
             <section className='flex-column align-center'>
-              <button onClick={() => props.history.goBack()}>Go Back</button>
+              <button onClick={() => props.history.goBack()}>&#11013; Go Back</button>
               <InformationList result={fetchResult} history={props.history} />
-              <button onClick={() => props.history.goBack()}>Go Back</button>
+              <button onClick={() => props.history.goBack()}>&#11013; Go Back</button>
             </section>
           )
         }

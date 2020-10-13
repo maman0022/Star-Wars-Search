@@ -40,7 +40,7 @@ export default function SearchResults(props) {
             )
           }
 
-          else if (!fetchResult) {
+          if (!fetchResult) {
             fetchInfo();
             return (
               <div className="flex-column justify-center align-center full-width full-height">
@@ -63,7 +63,7 @@ export default function SearchResults(props) {
               if (!isNaN(totalPages)) {
                 let output = [];
                 for (let i = 1; i <= totalPages; i++) {
-                  output.push(<button onClick={handlePageClick}>{i}</button>)
+                  output.push(<button key={i} onClick={handlePageClick}>{i}</button>)
                 }
                 return output;
               }
@@ -74,10 +74,10 @@ export default function SearchResults(props) {
                 <h2 id='result-header'>{subject}</h2>
                 {fetchResult.count ? void 0 : <h2>No Results</h2>}
                 <ResultList fetchResult={fetchResult} />
-                <nav id='results-page-nav' className='flex-row justify-evenly align-center'>
-                  <button onClick={() => props.history.push('/')}>&#11013; Search Again</button>
+                <nav id='results-page-nav' className='flex-row justify-evenly align-center full-width'>
                   {fetchResult.next || fetchResult.previous ? generatePages() : void 0}
                 </nav>
+                <button onClick={() => props.history.push('/')}>&#11013; Search Again</button>
               </section>
             )
           }
